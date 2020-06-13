@@ -10,8 +10,8 @@ public class Empty extends Tile {
     }
 
     @Override
-    public void accept(Unit unit) {
-        unit.visit(this);
+    public void accept(Unit unit,Tile[][]board) {
+         unit.visit(this,board);
     }
 
     @Override

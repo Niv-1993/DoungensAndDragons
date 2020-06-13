@@ -1,6 +1,12 @@
 package DND.Players;
 
-import DND.MessageHandler;
+import DND.Enemies.Enemy;
+import DND.Tiles.Tile;
+import DND.Tiles.Unit;
+
+import java.awt.*;
+import java.util.List;
+import java.util.Random;
 
 public class Mage extends Player {
     private int manaPool;
@@ -12,13 +18,14 @@ public class Mage extends Player {
     private final String SPECIAL_ABILITY = "Blizzard";
 
 
-    public Mage(int x, int y, String unitName, int healthPool, int healthAmount, int attackPoints, int defencePoints, int manaPool, int spellPower, int hitCounts, int abilityRange) {
+    public Mage(int x, int y, String unitName, int healthPool, int healthAmount, int attackPoints, int defencePoints, int manaPool, int manaCost, int spellPower, int hitCounts, int abilityRange) {
         super(x, y, unitName, healthPool, healthAmount, attackPoints, defencePoints);
         this.manaPool = manaPool;
         currentMana = manaPool / 4;
         this.spellPower = spellPower;
         this.hitCounts = hitCounts;
         this.abilityRange = abilityRange;
+        this.manaCost = manaCost;
     }
 
     public void LevelUp() {
@@ -26,17 +33,70 @@ public class Mage extends Player {
         setManaPool(getManaPool() + (25 * getLevel()));
         setCurrentMana(Math.min(getCurrentMana() + (getManaPool() / 4), getManaPool()));
         setSpellPower(getSpellPower() + (10 * getLevel()));
-
     }
 
-    @Override
     public String describe() {
-        return null;
+        return getName() + "        " +
+                "Health: " + getHealthAmount() + "/" + getHealthPool() +
+                "        " +
+                "Attack: " + getAttackPoints() +
+                "        " +
+                "Defense: " + getDefencePoints() +
+                "        " +
+                "Level: " + getLevel() +
+                "        " +
+                "Experience: "  + getExperience() +
+                "        " +
+                "Mana: " + getManaPool() +
+                "        " +
+                "Mana Cost: " + getManaCost() +
+                "        " +
+                "Spell Power: " + getSpellPower() +
+                "        " +
+                "Special Ability: " + SPECIAL_ABILITY;
+
     }
 
     @Override
-    public void SpecialAbility() {
-
+    public void SpecialAbility(Tile[][] board, List<Enemy> enemies) {
+        if (currentMana < manaCost)
+            m.sendMessage("Not enough mana for using " + SPECIAL_ABILITY);
+        else {
+            m.sendMessage(getName() + " cast " + SPECIAL_ABILITY);
+            setCurrentMana(currentMana - manaCost);
+            int hits = 0;
+            List<Enemy> enemiesInRange = InRange(getAbilityRange(), board, getPosition(), enemies,false);
+            while ((hits < getHitCounts()) & (enemiesInRange.size() > 0)) {
+                Random i = new Random();
+                Enemy enemyToAttack = enemiesInRange.get(i.nextInt(enemiesInRange.size()));
+                int tryDefend = i.nextInt(enemyToAttack.getDefencePoints());
+                m.sendMessage(enemyToAttack.getName() + " rolled " + tryDefend + " defense points");
+                int damage = getSpellPower() - tryDefend;
+                if (damage > 0) {
+                    enemyToAttack.setHealthAmount(enemyToAttack.getHealthAmount() - damage); //enemy will reduce its health amount after trying to defend by within spell power
+                    m.sendMessage(getName() + " hit " + enemyToAttack.getName() + " for " + damage + " ability damage");
+                    if (enemyToAttack.getHealthAmount() <= 0) {
+                        setExperience(getExperience() + enemyToAttack.getExperienceValue());
+                        m.sendMessage(enemyToAttack.getName() + " died. " + getName() + " gained " + enemyToAttack.getExperienceValue() + " experience");
+                        tryLevelUp();
+                        enemiesInRange.remove(enemyToAttack);
+                    }
+                }
+                hits++;
+            }
+        }
+    }
+    @Override
+    public void tryLevelUp() {
+        while (getExperience() >= (50 * getLevel())) {
+            int amoutHealth = getHealthAmount();
+            int amoutAttack = getAttackPoints();
+            int amoutDefense = getDefencePoints();
+            int amoutMaxMana = getManaPool();
+            int amoutSpeelPower = getSpellPower();
+            LevelUp();
+            m.sendMessage(getName() + " reached level " + getLevel() + ": +" + (getHealthAmount() - amoutHealth) + " Health, +" + (getAttackPoints()-amoutAttack) + " Attack,\n +" + (getDefencePoints()-amoutDefense) + " Defense, +" +(getManaPool()-amoutMaxMana)+" Maximum mana, +"+(getSpellPower()-amoutSpeelPower)+" spell power");
+        }
     }
 
     public int getManaPool() {
@@ -85,6 +145,11 @@ public class Mage extends Player {
 
     public void setAbilityRange(int abilityRange) {
         this.abilityRange = abilityRange;
+    }
+
+    @Override
+    public void gamePlayerTick() {
+        setCurrentMana(Math.min(getManaPool(), (getCurrentMana() + 1) * getLevel()));
     }
 
 }

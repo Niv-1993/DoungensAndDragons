@@ -1,14 +1,19 @@
 package DND.Players;
 
 import DND.Enemies.Enemy;
-import DND.MessageHandler;
+import DND.Tiles.Empty;
 import DND.Tiles.Tile;
 import DND.Tiles.Unit;
+
+import java.awt.*;
+import java.util.List;
+import java.util.Random;
+
 
 public abstract class Player extends Unit {
     private int experience;
     private int level;
-    private static final char PLAYER_TILE ='@';
+    private static final char PLAYER_TILE = '@';
 
     public Player(int x, int y, String unitName, int healthPool, int healthAmount, int attackPoints, int defencePoints) {
         super(PLAYER_TILE, x, y, unitName, healthPool, healthAmount, attackPoints, defencePoints);
@@ -17,49 +22,61 @@ public abstract class Player extends Unit {
     }
 
 
-
     public void LevelUp() {
         int currentLevel = getLevel();
-        if (getExperience() == (50 * currentLevel)) {
-            setExperience(getExperience() - (50 * currentLevel));
-            setLevel(currentLevel + 1);
-            currentLevel = getLevel();
-            setHealthPool(getHealthPool() + (10 * currentLevel));
-            setHealthAmount(getHealthPool());
-            setAttackPoints(getAttackPoints() + (4 * currentLevel));
-            setDefencePoints(getDefencePoints() + currentLevel);
-            m.sendMessage(getName() + " leveled up to " +getLevel()+ " and gained "+getAttackPoints() + " attack points and "+getDefencePoints() + " defence points");
-        }
+        setExperience(getExperience() - (50 * currentLevel));
+        setLevel(currentLevel + 1);
+        currentLevel = getLevel();
+        setHealthPool(getHealthPool() + (10 * currentLevel));
+        setHealthAmount(getHealthPool());
+        setAttackPoints(getAttackPoints() + (4 * currentLevel));
+        setDefencePoints(getDefencePoints() + currentLevel);
+
     }
 
     public abstract String describe();
-    public abstract void SpecialAbility();
 
+    public abstract void SpecialAbility(Tile[][] board, List<Enemy> enemies);
+
+    public abstract void gamePlayerTick();
 
     @Override
-    public void interact(Tile tile) {
-        tile.accept(this);
+    public void interact(Tile tile, Tile[][] board) {
+        tile.accept(this, board);
     }
 
     @Override
-    public void visit(Player player) { //nothing happens
+    public void visit(Player player, Tile[][] board) {
+    }
+
+    public abstract void tryLevelUp();
+
+    @Override
+    public void visit(Enemy enemy, Tile[][] board) { //get in combat ---> if player wins then gets experience else endgame
+        m.sendMessage(getName() + " engaged in combat with " + enemy.getName());
+        Random attackRoll = new Random();
+        Random defendRoll = new Random();
+        int amountAttack = attackRoll.nextInt(getAttackPoints());
+        m.sendMessage(getName() + " rolled " + amountAttack + " attack points");
+        int amountDefend = defendRoll.nextInt(enemy.getDefencePoints());
+        m.sendMessage(enemy.getName() + " rolled " + amountDefend + " defense points");
+        int damage = amountAttack - amountDefend;
+        if (damage > 0) {
+            enemy.setHealthAmount(enemy.getHealthAmount() - damage);
+            m.sendMessage(getName() + " dealt " + damage + " damage to " + enemy.getName());
+            if (enemy.getHealthAmount() <= 0) {
+                setExperience(getExperience() + enemy.getExperienceValue());
+                m.sendMessage(enemy.getName() + " died. " + getName() + " gained " + enemy.getExperienceValue() + " experience");
+                tryLevelUp();
+                swap(this.getPosition(), enemy.getPosition(), board);
+            }
+        }
     }
 
     @Override
-    public void visit(Enemy enemy) { //get in combat ---> if player wins then gets experience else endgame
-
+    public void accept(Unit unit, Tile[][] board) {
+        unit.visit(this, board);
     }
-
-    @Override
-    public void accept(Unit unit) {
-        unit.visit(this);
-    }
-
-
-
-
-
-
 
 
     public int getExperience() {

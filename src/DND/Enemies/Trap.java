@@ -1,21 +1,41 @@
 package DND.Enemies;
 
-public class Trap extends Enemy{
+import DND.Players.Player;
+import DND.Tiles.Tile;
+import DND.Tiles.Unit;
+
+import java.awt.*;
+
+public class Trap extends Enemy {
     private int visibilityTime;
     private int inVisibilityTime;
     private int ticksCount;
     private boolean visible;
-    public Trap(char tile, int x, int y, String unitName, int healthPool, int healthAmount, int attackPoints, int defencePoints, int experienceValue, int visibilityTime,int inVisibilityTime) {
+    private final char tile;
+
+    public Trap(char tile, int x, int y, String unitName, int healthPool, int healthAmount, int attackPoints, int defencePoints, int experienceValue, int visibilityTime, int inVisibilityTime) {
         super(tile, x, y, unitName, healthPool, healthAmount, attackPoints, defencePoints, experienceValue);
         this.visibilityTime = visibilityTime;
         this.inVisibilityTime = inVisibilityTime;
         ticksCount = 0;
         visible = true;
+        this.tile = tile;
     }
 
-    @Override
-    public void Turn() {
 
+    @Override
+    public void gameEnemyTick(Player player, Tile[][] board) {
+        setVisible(getTicksCount() < getVisibilityTime());
+        if (!isVisible())
+            setTile('.');
+        else setTile(tile);
+        if (getTicksCount() == (getVisibilityTime() + getInVisibilityTime())) {
+            setTicksCount(0);
+        } else {
+            setTicksCount(getTicksCount() + 1);
+        }
+        if (range(getPosition(), player.getPosition()) < 2)
+            interact(player,board);
     }
 
     @Override
@@ -54,4 +74,5 @@ public class Trap extends Enemy{
     public void setVisible(boolean visible) {
         this.visible = visible;
     }
+
 }
