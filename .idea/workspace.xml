@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="untitled104:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d535aba9-82fb-46e8-be87-c70a65bf98bb" name="Default Changelist" comment="visitor" />
+    <list default="true" id="d535aba9-82fb-46e8-be87-c70a65bf98bb" name="Default Changelist" comment="visitor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/Enemies/Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/Enemies/Boss.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/GameManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/Players/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/Players/Mage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/META-INF/untitled104.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DND/Players/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Players/Mage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,9 +51,14 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -131,6 +150,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="845" y="383" key="#Notifications/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1591306019311" />
+    <state x="552" y="161" key="#Plugins" timestamp="1592409788632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="161" key="#Plugins/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592409788632" />
     <state x="447" y="350" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591946562272">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -147,10 +170,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="873" y="266" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592404445174" />
-    <state x="690" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592074488149">
+    <state x="690" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592408603358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592074488149" />
+    <state x="690" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408603358" />
     <state x="743" y="414" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592070751786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -163,6 +186,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="534" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1591969568487" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1592408639572">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408639572" />
     <state width="335" height="912" key="GridCell.Tab.0.bottom" timestamp="1592408290638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -195,6 +222,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="422" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592075484988" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1592408643688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408643688" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592408204548">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

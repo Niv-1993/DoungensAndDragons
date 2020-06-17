@@ -29,14 +29,14 @@ public class Mage extends Player {
     }
 
     @Override
-    public void castAbility(Tile[][] board, List<Enemy> enemies ,Unit player) {
+    public void castAbility(Tile[][] board, List<Enemy> enemies, Unit player) {
         if (currentMana < manaCost)
             m.sendMessage("Not enough mana for using " + SPECIAL_ABILITY);
         else {
-            m.sendMessage(getName() + " cast " + SPECIAL_ABILITY);
+            m.sendMessage(getName() + "  cast " + SPECIAL_ABILITY);
             setCurrentMana(currentMana - manaCost);
             int hits = 0;
-            List<Enemy> enemiesInRange = InRange(getAbilityRange(), board, getPosition(), enemies,false);
+            List<Enemy> enemiesInRange = InRange(getAbilityRange(), board, getPosition(), enemies, false);
             while ((hits < getHitCounts()) & (enemiesInRange.size() > 0)) {
                 Random i = new Random();
                 Enemy enemyToAttack = enemiesInRange.get(i.nextInt(enemiesInRange.size()));
@@ -57,6 +57,7 @@ public class Mage extends Player {
             }
         }
     }
+
     public void LevelUp() {
         super.LevelUp();
         setManaPool(getManaPool() + (25 * getLevel()));
@@ -73,9 +74,10 @@ public class Mage extends Player {
             int amoutMaxMana = getManaPool();
             int amoutSpeelPower = getSpellPower();
             LevelUp();
-            m.sendMessage(getName() + " reached level " + getLevel() + ": +" + (getHealthAmount() - amoutHealth) + " Health, +" + (getAttackPoints()-amoutAttack) + " Attack,\n +" + (getDefencePoints()-amoutDefense) + " Defense, +" +(getManaPool()-amoutMaxMana)+" Maximum mana, +"+(getSpellPower()-amoutSpeelPower)+" spell power");
+            m.sendMessage(getName() + " reached level " + getLevel() + ": +" + (getHealthAmount() - amoutHealth) + " Health, +" + (getAttackPoints() - amoutAttack) + " Attack,\n +" + (getDefencePoints() - amoutDefense) + " Defense, +" + (getManaPool() - amoutMaxMana) + " Maximum mana, +" + (getSpellPower() - amoutSpeelPower) + " spell power");
         }
     }
+
     @Override
     public void gamePlayerTick() {
         setCurrentMana(Math.min(getManaPool(), (getCurrentMana() + 1) * getLevel()));
@@ -91,9 +93,9 @@ public class Mage extends Player {
                 "        " +
                 "Level: " + getLevel() +
                 "        " +
-                "Experience: "  + getExperience() +
+                "Experience: " + getExperience() +
                 "        " +
-                "Mana: " + getManaPool() +
+                "Mana: " + getCurrentMana() + "/" + getManaPool() +
                 "        " +
                 "Mana Cost: " + getManaCost() +
                 "        " +
@@ -105,27 +107,35 @@ public class Mage extends Player {
     public int getManaPool() {
         return manaPool;
     }
+
     public void setManaPool(int manaPool) {
         this.manaPool = manaPool;
     }
+
     public int getCurrentMana() {
         return currentMana;
     }
+
     public void setCurrentMana(int currentMana) {
         this.currentMana = currentMana;
     }
+
     public int getManaCost() {
         return manaCost;
     }
+
     public int getSpellPower() {
         return spellPower;
     }
+
     public void setSpellPower(int spellPower) {
         this.spellPower = spellPower;
     }
+
     public int getHitCounts() {
         return hitCounts;
     }
+
     public int getAbilityRange() {
         return abilityRange;
     }
