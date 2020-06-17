@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d535aba9-82fb-46e8-be87-c70a65bf98bb" name="Default Changelist" comment="visitor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Enemies/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Enemies/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Enemies/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Enemies/Trap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Players/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Players/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Players/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Players/Rogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Players/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Players/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Tiles/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DND/Tiles/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Tiles/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="d535aba9-82fb-46e8-be87-c70a65bf98bb" name="Default Changelist" comment="visitor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Packages" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -176,22 +163,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="534" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1591969568487" />
-    <state width="335" height="912" key="GridCell.Tab.0.bottom" timestamp="1592407682916">
+    <state width="335" height="912" key="GridCell.Tab.0.bottom" timestamp="1592408290638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="335" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592407682916" />
-    <state width="335" height="912" key="GridCell.Tab.0.center" timestamp="1592407682916">
+    <state width="335" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408290638" />
+    <state width="335" height="912" key="GridCell.Tab.0.center" timestamp="1592408290638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="335" height="912" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592407682916" />
-    <state width="335" height="912" key="GridCell.Tab.0.left" timestamp="1592407682916">
+    <state width="335" height="912" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408290638" />
+    <state width="335" height="912" key="GridCell.Tab.0.left" timestamp="1592408290638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="335" height="912" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592407682916" />
-    <state width="335" height="912" key="GridCell.Tab.0.right" timestamp="1592407682916">
+    <state width="335" height="912" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408290638" />
+    <state width="335" height="912" key="GridCell.Tab.0.right" timestamp="1592408290638">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="335" height="912" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592407682916" />
+    <state width="335" height="912" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408290638" />
     <state width="1877" height="422" key="GridCell.Tab.1.bottom" timestamp="1592075484988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -208,10 +195,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="422" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592075484988" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592075456633">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592408204548">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592075456633" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408204548" />
     <state x="665" y="411" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1592074447693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
