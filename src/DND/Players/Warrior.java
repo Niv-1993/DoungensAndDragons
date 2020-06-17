@@ -22,7 +22,7 @@ public class Warrior extends Player {
 
 
     @Override
-    public void SpecialAbility(Tile[][] board, List<Enemy> enemies) {
+    public void castAbility(Tile[][] board, List<Enemy> enemies ,Unit player) {
         if (RemainingCoolDown > 0) {
             m.sendMessage("Remaining Cooldown is still high to use " + SPECIAL_ABILITY);
         } else {
@@ -99,10 +99,6 @@ public class Warrior extends Player {
 
     public int getAbilityCoolDown() {
         return AbilityCoolDown;
-    }
-
-    public void setAbilityCoolDown(int abilityCoolDown) {
-        AbilityCoolDown = abilityCoolDown;
     }
 
     public int getRemainingCoolDown() {

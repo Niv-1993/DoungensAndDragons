@@ -20,20 +20,17 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-
             Scanner myScanner = new Scanner(System.in);
             CharacterTypes types = new CharacterTypes();
             System.out.println("Select a player : ");
             types.printAllPlayers();
             int choice = myScanner.nextInt();
-            while(!(choice>0 && choice<8)){
+            while (!(choice > 0 && choice < 8)) {
                 System.out.println("Invalid choice number , please select a player : ");
                 choice = myScanner.nextInt();
             }
-
             Player chosenPlayer = types.getPlayerTile(choice);
             System.out.println("You have selected: " + "\n" + chosenPlayer.getName());
-
             //<AFTER CHOOSING A PLAYER WE LOAD ALL LEVELS OF GAME>
             List<String> levelFiles = Files.list(Paths.get(args[0])).sorted().map(Path::toString).collect(Collectors.toList());
             List<Level> levels = new ArrayList<>();
@@ -60,10 +57,8 @@ public class Main {
                     chosenPlayer.describe();
                     System.out.println("Game Over.");
                     break;
-                }
-                else
-                    if(i < levels.size()-1)
-                        levels.get(i+1).setP(l.getP());
+                } else if (i < levels.size() - 1)
+                    levels.get(i + 1).setP(l.getP());
             }
 
 

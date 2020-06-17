@@ -25,7 +25,7 @@ public abstract class Unit extends Tile {
     }
 
 
-    public List<Enemy> InRange(int range, Tile[][] board, Point playerPosition, List<Enemy> enemies, boolean equal) {
+        public List<Enemy> InRange(int range, Tile[][] board, Point playerPosition, List<Enemy> enemies, boolean equal) {
         List<Tile> listOFTiles = new ArrayList<>();
         List<Enemy> listOFEnemy = new ArrayList<>();
         for (int i = 0; i < board.length; i++) {
@@ -52,56 +52,56 @@ public abstract class Unit extends Tile {
     }
 
 
-        //visitor pattern
-        public abstract void interact (Tile tile, Tile[][]board);
+    //visitor pattern
+    public abstract void interact(Tile tile, Tile[][] board);
 
-        public abstract void visit (Enemy enemy, Tile[][]board);
+    public abstract void visit(Enemy enemy, Tile[][] board);
 
-        public abstract void visit (Player player, Tile[][]board);
-
-
-        public void visit (Wall wall, Tile[][]board){ //nothing happen
-        }
-
-        public void visit (Empty empty, Tile[][]board){ //swap positions
-            swap(getPosition(), empty.getPosition(), board);
-        }
+    public abstract void visit(Player player, Tile[][] board);
 
 
-        public String getName () {
-            return name;
-        }
-
-        public int getAttackPoints () {
-            return attackPoints;
-        }
-
-        public int getDefencePoints () {
-            return defencePoints;
-        }
-
-        public int getHealthPool () {
-            return healthPool;
-        }
-
-        public int getHealthAmount () {
-            return healthAmount;
-        }
-
-        public void setAttackPoints ( int attackPoints){
-            this.attackPoints = attackPoints;
-        }
-
-        public void setDefencePoints ( int defencePoints){
-            this.defencePoints = defencePoints;
-        }
-
-        public void setHealthAmount ( int healthAmount){
-            this.healthAmount = healthAmount;
-        }
-
-        public void setHealthPool ( int healthPool){
-            this.healthPool = healthPool;
-        }
-
+    public void visit(Wall wall, Tile[][] board) { //nothing happen
     }
+
+    public void visit(Empty empty, Tile[][] board) { //swap positions
+        swap(getPosition(), empty.getPosition(), board);
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAttackPoints() {
+        return attackPoints;
+    }
+
+    public int getDefencePoints() {
+        return defencePoints;
+    }
+
+    public int getHealthPool() {
+        return healthPool;
+    }
+
+    public int getHealthAmount() {
+        return healthAmount;
+    }
+
+    public void setAttackPoints(int attackPoints) {
+        this.attackPoints = attackPoints;
+    }
+
+    public void setDefencePoints(int defencePoints) {
+        this.defencePoints = defencePoints;
+    }
+
+    public void setHealthAmount(int healthAmount) {
+        this.healthAmount = healthAmount;
+    }
+
+    public void setHealthPool(int healthPool) {
+        this.healthPool = healthPool;
+    }
+
+}

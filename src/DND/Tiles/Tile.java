@@ -1,12 +1,10 @@
 package DND.Tiles;
 import DND.CmdPrinter;
-import DND.Enemies.Enemy;
 import DND.MessageHandler;
-import DND.Players.Player;
+
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public abstract class Tile {
     protected MessageHandler m;

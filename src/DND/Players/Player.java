@@ -2,6 +2,7 @@ package DND.Players;
 
 import DND.Enemies.Enemy;
 import DND.Tiles.Empty;
+import DND.Tiles.HeroicUnit;
 import DND.Tiles.Tile;
 import DND.Tiles.Unit;
 
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public abstract class Player extends Unit {
+public abstract class Player extends Unit implements HeroicUnit {
     private int experience;
     private int level;
     private static final char PLAYER_TILE = '@';
@@ -34,25 +35,20 @@ public abstract class Player extends Unit {
 
     }
 
-    public abstract String describe();
-
-    public abstract void SpecialAbility(Tile[][] board, List<Enemy> enemies);
-
-    public abstract void gamePlayerTick();
-
+    //VISITOR PATTERN
+    @Override
+    public void accept(Unit unit, Tile[][] board) {
+        unit.visit(this, board);
+    }
     @Override
     public void interact(Tile tile, Tile[][] board) {
         tile.accept(this, board);
     }
-
     @Override
     public void visit(Player player, Tile[][] board) {
     }
-
-    public abstract void tryLevelUp();
-
     @Override
-    public void visit(Enemy enemy, Tile[][] board) { //get in combat ---> if player wins then gets experience else endgame
+    public void visit(Enemy enemy, Tile[][] board) { //get in combat
         m.sendMessage(getName() + " engaged in combat with " + enemy.getName());
         Random attackRoll = new Random();
         Random defendRoll = new Random();
@@ -73,10 +69,11 @@ public abstract class Player extends Unit {
         }
     }
 
-    @Override
-    public void accept(Unit unit, Tile[][] board) {
-        unit.visit(this, board);
-    }
+
+    public abstract String describe();
+    public abstract void castAbility(Tile[][] board, List<Enemy> enemies ,Unit player);
+    public abstract void gamePlayerTick();
+    public abstract void tryLevelUp();
 
 
     public int getExperience() {
@@ -96,6 +93,6 @@ public abstract class Player extends Unit {
     }
 
 
-    //VISITOR PATTERN
+
 
 }

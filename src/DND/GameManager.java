@@ -6,9 +6,8 @@ import DND.Tiles.Empty;
 import DND.Tiles.Tile;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
+
 
 public class GameManager {
 
@@ -49,30 +48,25 @@ public class GameManager {
 
     public void tick(char approach) {
         Point positionPlayer = player.getPosition();
-
         switch (approach) {
             case 'w':
                 Tile upTile = board[positionPlayer.x - 1][positionPlayer.y];
-                player.interact(upTile,board);
-
+                player.interact(upTile, board);
                 break;
             case 's':
                 Tile downTile = board[positionPlayer.x + 1][positionPlayer.y];
-                player.interact(downTile,board);
-
+                player.interact(downTile, board);
                 break;
             case 'a':
                 Tile leftTile = board[positionPlayer.x][positionPlayer.y - 1];
-                player.interact(leftTile,board);
-
+                player.interact(leftTile, board);
                 break;
             case 'd':
                 Tile rightTile = board[positionPlayer.x][positionPlayer.y + 1];
-                player.interact(rightTile,board);
-
+                player.interact(rightTile, board);
                 break;
             case 'e':
-                player.SpecialAbility(board, enemies);
+                player.castAbility(board, enemies, player);
                 break;
             case 'q':
                 break;
@@ -81,7 +75,7 @@ public class GameManager {
         for (int i = 0; i < enemies.size(); i++) {
             if (enemies.get(i).getHealthAmount() <= 0) {
                 Enemy enemy = enemies.remove(i);
-                board[enemy.getPosition().x][enemy.getPosition().y] = new Empty(enemy.getPosition().x,enemy.getPosition().y);
+                board[enemy.getPosition().x][enemy.getPosition().y] = new Empty(enemy.getPosition().x, enemy.getPosition().y);
             }
         }
         Tick(); //first player and then a enemy makes a random movement tick or chase a player
@@ -95,7 +89,7 @@ public class GameManager {
     private void Tick() {
         player.gamePlayerTick();
         for (Enemy e : enemies) {
-            e.gameEnemyTick(player, board);
+            e.gameEnemyTick(player, board, enemies);
 
         }
     }

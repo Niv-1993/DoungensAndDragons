@@ -28,7 +28,7 @@ public class Rogue extends Player {
 
 
     @Override
-    public void SpecialAbility(Tile[][] board, List<Enemy> enemies) {
+    public void castAbility(Tile[][] board, List<Enemy> enemies ,Unit player) {
         if (getCurrentEnergy() < getCost())
             m.sendMessage("Not enough energy for using " + SPECIAL_ABILITY);
         else {
@@ -58,10 +58,6 @@ public class Rogue extends Player {
 
     public int getCost() {
         return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
     }
 
     public int getCurrentEnergy() {

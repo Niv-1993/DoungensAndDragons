@@ -5,6 +5,7 @@ import DND.Tiles.Tile;
 import DND.Tiles.Unit;
 
 import java.awt.*;
+import java.util.List;
 import java.util.Random;
 
 
@@ -17,11 +18,6 @@ public abstract class Enemy extends Unit {
         this.experienceValue = experienceValue;
     }
 
-    public int getExperienceValue() {
-        return experienceValue;
-    }
-
-    public abstract void gameEnemyTick(Player player, Tile[][] board);
 
     protected void moveDown(Tile[][] board) {
         Tile downTile = board[getPosition().x + 1][getPosition().y];
@@ -43,11 +39,31 @@ public abstract class Enemy extends Unit {
         interact(leftTile, board);
     }
 
+    protected void randomMovement(Tile[][] board) {
+        Random r = new Random();
+        int i = r.nextInt(5);
+        switch (i) {
+            case 1:
+                moveUp(board);
+                break;
+            case 2:
+                moveDown(board);
+                break;
+            case 3:
+                moveLeft(board);
+                break;
+            case 4:
+                moveRight(board);
+                break;
+            case 5:
+                break;
+        }
+    }
+    //VISITOR PATTERN
     @Override
     public void interact(Tile tile,Tile[][]board) {
         tile.accept(this,board);
     }
-
     @Override
     public void visit(Player player,Tile[][]board) { // //get in combat ---> if player wins then gets experience else endgame
         m.sendMessage(getName() + " engaged in combat with " + player.getName());
@@ -68,19 +84,18 @@ public abstract class Enemy extends Unit {
             }
         }
     }
-
     @Override
     public void visit(Enemy enemy,Tile[][]board) { //nothing happens
     }
-
     @Override
     public void accept(Unit unit,Tile[][]board) {
         unit.visit(this,board);
     }
 
+    public int getExperienceValue() {
+        return experienceValue;
+    }
 
-    public abstract String describe();
-    //VISITOR PATTERN
 
-
+    public abstract void gameEnemyTick(Player player, Tile[][] board, List<Enemy> enemies);
 }

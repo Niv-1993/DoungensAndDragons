@@ -28,37 +28,8 @@ public class Mage extends Player {
         this.manaCost = manaCost;
     }
 
-    public void LevelUp() {
-        super.LevelUp();
-        setManaPool(getManaPool() + (25 * getLevel()));
-        setCurrentMana(Math.min(getCurrentMana() + (getManaPool() / 4), getManaPool()));
-        setSpellPower(getSpellPower() + (10 * getLevel()));
-    }
-
-    public String describe() {
-        return getName() + "        " +
-                "Health: " + getHealthAmount() + "/" + getHealthPool() +
-                "        " +
-                "Attack: " + getAttackPoints() +
-                "        " +
-                "Defense: " + getDefencePoints() +
-                "        " +
-                "Level: " + getLevel() +
-                "        " +
-                "Experience: "  + getExperience() +
-                "        " +
-                "Mana: " + getManaPool() +
-                "        " +
-                "Mana Cost: " + getManaCost() +
-                "        " +
-                "Spell Power: " + getSpellPower() +
-                "        " +
-                "Special Ability: " + SPECIAL_ABILITY;
-
-    }
-
     @Override
-    public void SpecialAbility(Tile[][] board, List<Enemy> enemies) {
+    public void castAbility(Tile[][] board, List<Enemy> enemies ,Unit player) {
         if (currentMana < manaCost)
             m.sendMessage("Not enough mana for using " + SPECIAL_ABILITY);
         else {
@@ -86,6 +57,13 @@ public class Mage extends Player {
             }
         }
     }
+    public void LevelUp() {
+        super.LevelUp();
+        setManaPool(getManaPool() + (25 * getLevel()));
+        setCurrentMana(Math.min(getCurrentMana() + (getManaPool() / 4), getManaPool()));
+        setSpellPower(getSpellPower() + (10 * getLevel()));
+    }
+
     @Override
     public void tryLevelUp() {
         while (getExperience() >= (50 * getLevel())) {
@@ -98,58 +76,59 @@ public class Mage extends Player {
             m.sendMessage(getName() + " reached level " + getLevel() + ": +" + (getHealthAmount() - amoutHealth) + " Health, +" + (getAttackPoints()-amoutAttack) + " Attack,\n +" + (getDefencePoints()-amoutDefense) + " Defense, +" +(getManaPool()-amoutMaxMana)+" Maximum mana, +"+(getSpellPower()-amoutSpeelPower)+" spell power");
         }
     }
-
-    public int getManaPool() {
-        return manaPool;
-    }
-
-    public void setManaPool(int manaPool) {
-        this.manaPool = manaPool;
-    }
-
-    public int getCurrentMana() {
-        return currentMana;
-    }
-
-    public void setCurrentMana(int currentMana) {
-        this.currentMana = currentMana;
-    }
-
-    public int getManaCost() {
-        return manaCost;
-    }
-
-    public void setManaCost(int manaCost) {
-        this.manaCost = manaCost;
-    }
-
-    public int getSpellPower() {
-        return spellPower;
-    }
-
-    public void setSpellPower(int spellPower) {
-        this.spellPower = spellPower;
-    }
-
-    public int getHitCounts() {
-        return hitCounts;
-    }
-
-    public void setHitCounts(int hitCounts) {
-        this.hitCounts = hitCounts;
-    }
-
-    public int getAbilityRange() {
-        return abilityRange;
-    }
-
-    public void setAbilityRange(int abilityRange) {
-        this.abilityRange = abilityRange;
-    }
-
     @Override
     public void gamePlayerTick() {
         setCurrentMana(Math.min(getManaPool(), (getCurrentMana() + 1) * getLevel()));
     }
+
+    public String describe() {
+        return getName() + "        " +
+                "Health: " + getHealthAmount() + "/" + getHealthPool() +
+                "        " +
+                "Attack: " + getAttackPoints() +
+                "        " +
+                "Defense: " + getDefencePoints() +
+                "        " +
+                "Level: " + getLevel() +
+                "        " +
+                "Experience: "  + getExperience() +
+                "        " +
+                "Mana: " + getManaPool() +
+                "        " +
+                "Mana Cost: " + getManaCost() +
+                "        " +
+                "Spell Power: " + getSpellPower() +
+                "        " +
+                "Special Ability: " + SPECIAL_ABILITY;
+    }
+
+    public int getManaPool() {
+        return manaPool;
+    }
+    public void setManaPool(int manaPool) {
+        this.manaPool = manaPool;
+    }
+    public int getCurrentMana() {
+        return currentMana;
+    }
+    public void setCurrentMana(int currentMana) {
+        this.currentMana = currentMana;
+    }
+    public int getManaCost() {
+        return manaCost;
+    }
+    public int getSpellPower() {
+        return spellPower;
+    }
+    public void setSpellPower(int spellPower) {
+        this.spellPower = spellPower;
+    }
+    public int getHitCounts() {
+        return hitCounts;
+    }
+    public int getAbilityRange() {
+        return abilityRange;
+    }
+
 
 }

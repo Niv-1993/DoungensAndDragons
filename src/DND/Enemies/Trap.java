@@ -5,6 +5,7 @@ import DND.Tiles.Tile;
 import DND.Tiles.Unit;
 
 import java.awt.*;
+import java.util.List;
 
 public class Trap extends Enemy {
     private int visibilityTime;
@@ -24,7 +25,7 @@ public class Trap extends Enemy {
 
 
     @Override
-    public void gameEnemyTick(Player player, Tile[][] board) {
+    public void gameEnemyTick(Player player, Tile[][] board, List<Enemy> enemies) {
         setVisible(getTicksCount() < getVisibilityTime());
         if (!isVisible())
             setTile('.');
@@ -38,25 +39,12 @@ public class Trap extends Enemy {
             interact(player,board);
     }
 
-    @Override
-    public String describe() {
-        return null;
-    }
-
     public int getVisibilityTime() {
         return visibilityTime;
     }
 
-    public void setVisibilityTime(int visibilityTime) {
-        this.visibilityTime = visibilityTime;
-    }
-
     public int getInVisibilityTime() {
         return inVisibilityTime;
-    }
-
-    public void setInVisibilityTime(int inVisibilityTime) {
-        this.inVisibilityTime = inVisibilityTime;
     }
 
     public int getTicksCount() {
