@@ -26,6 +26,7 @@ public class Mage extends Player {
         this.hitCounts = hitCounts;
         this.abilityRange = abilityRange;
         this.manaCost = manaCost;
+
     }
 
     @Override

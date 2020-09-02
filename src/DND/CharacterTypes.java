@@ -16,7 +16,7 @@ public class CharacterTypes{
         addCharacters();
     }
 
-    public void addCharacters() {
+    private void addCharacters() {
         //MONSTERS
         enemyTypes.put('s', (i,j) -> new Monster('s', i, j, "Lannister Solider", 80, 80, 8, 3, 25, 3));
         enemyTypes.put('k',(i,j) -> new Monster('k',  i, j, "Lannister Knight", 200, 200, 14, 8, 50, 4));

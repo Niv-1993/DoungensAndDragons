@@ -45,7 +45,7 @@ public abstract class Tile {
     public abstract void accept(Unit unit,Tile[][]board);
 
 
-    protected void swap(Point tile1, Point tile2,Tile[][] board) {
+    public void swap(Point tile1, Point tile2, Tile[][] board) {
         int tile1X = tile1.x;
         int tile1Y = tile1.y;
         int tile2X = tile2.x;

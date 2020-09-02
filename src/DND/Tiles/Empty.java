@@ -4,7 +4,6 @@ import java.awt.*;
 
 public class Empty extends Tile {
     private static final char EMPTY_TILE ='.';
-    private Point position;
     public Empty(int x, int y) {
         super(EMPTY_TILE,x, y);
     }

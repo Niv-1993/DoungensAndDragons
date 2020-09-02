@@ -8,13 +8,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d535aba9-82fb-46e8-be87-c70a65bf98bb" name="Default Changelist" comment="visitor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/Enemies/Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/Enemies/Boss.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/Level.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/Players/Mage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/Players/Mage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/META-INF/untitled104.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/untitled104_jar/hw3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/untitled104_jar/levels/level1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/untitled104_jar/levels/level2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/untitled104_jar/levels/level3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/untitled104_jar/levels/level4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/untitled104_jar/untitled104.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/CharacterTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/CharacterTypes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/Tiles/Empty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/Tiles/Empty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/DND/Tiles/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/DND/Tiles/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DND/CharacterTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/CharacterTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DND/Players/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Players/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DND/Tiles/Empty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Tiles/Empty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DND/Tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DND/Tiles/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -57,11 +64,12 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Tests" />
       <recent name="DND.Tiles" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -72,7 +80,7 @@
       <recent name="DND.Visitor" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="untitled104" />
@@ -83,12 +91,73 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests in untitled104" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TileTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarriorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WarriorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarriorTest.tryLevelUp1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WarriorTest" />
+      <option name="METHOD_NAME" value="tryLevelUp1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.WarriorTest.tryLevelUp1" />
+        <item itemvalue="JUnit.TileTest" />
+        <item itemvalue="JUnit.Tests in untitled104" />
+        <item itemvalue="JUnit.WarriorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,29 +223,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="161" key="#Plugins/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592409788632" />
-    <state x="447" y="350" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591946562272">
+    <state x="434" y="207" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593255907020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="447" y="350" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1591946562272" />
+    <state x="434" y="207" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1593255907020" />
     <state x="729" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591203102818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="729" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1591203102818" />
-    <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1591345556513">
+    <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1593255879780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1591345556513" />
+    <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1593255879780" />
     <state x="873" y="266" key="#com.intellij.ide.util.MemberChooser" timestamp="1592404445174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="873" y="266" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592404445174" />
-    <state x="690" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592408603358">
+    <state x="840" y="209" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1592770720932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408603358" />
-    <state x="743" y="414" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592070751786">
+    <state x="840" y="209" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592770720932" />
+    <state x="690" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592771799740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="690" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592771799740" />
+    <state x="495" y="271" width="430" height="215" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595346472298">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="495" y="271" width="430" height="215" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1595346472298" />
     <state x="743" y="414" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592070751786" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591970223548">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -190,22 +264,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408639572" />
-    <state width="335" height="912" key="GridCell.Tab.0.bottom" timestamp="1592408290638">
+    <state width="376" height="912" key="GridCell.Tab.0.bottom" timestamp="1592772952628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="335" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408290638" />
-    <state width="335" height="912" key="GridCell.Tab.0.center" timestamp="1592408290638">
+    <state width="376" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592772952628" />
+    <state width="376" height="912" key="GridCell.Tab.0.center" timestamp="1592772952628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="335" height="912" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408290638" />
-    <state width="335" height="912" key="GridCell.Tab.0.left" timestamp="1592408290638">
+    <state width="376" height="912" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592772952628" />
+    <state width="376" height="912" key="GridCell.Tab.0.left" timestamp="1592772952628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="335" height="912" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408290638" />
-    <state width="335" height="912" key="GridCell.Tab.0.right" timestamp="1592408290638">
+    <state width="376" height="912" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592772952628" />
+    <state width="376" height="912" key="GridCell.Tab.0.right" timestamp="1592772952628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="335" height="912" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408290638" />
+    <state width="376" height="912" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592772952628" />
     <state width="1877" height="422" key="GridCell.Tab.1.bottom" timestamp="1592075484988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -222,10 +296,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="422" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592075484988" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1592408643688">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1592771824442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592408643688" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592771824442" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592408204548">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -238,14 +312,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1591209090835" />
-    <state x="881" y="171" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592074635945">
+    <state x="881" y="171" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592770757337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="881" y="171" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592074635945" />
+    <state x="881" y="171" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1592770757337" />
     <state x="667" y="76" width="585" height="888" key="find.popup" timestamp="1591985051881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="76" width="585" height="888" key="find.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1591985051881" />
+    <state x="209" y="33" key="new project wizard" timestamp="1595410302164">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1595410302164" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1592053817110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
